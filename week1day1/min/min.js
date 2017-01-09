@@ -1,5 +1,22 @@
 function min(numbers) {
-    // Write code here that returns the smallest value in numbers
+
+  if(numbers.length < 2) {
+    return numbers[0];
+  }
+
+  else {
+    var minimum = numbers[0];
+
+    for(var i = 1; i < numbers.length; i++) {
+      if(minimum > numbers[i]) {
+        minimum = numbers[i];
+      }
+    }
+
+    return minimum;
+
+  }
+    
 }
 
 
