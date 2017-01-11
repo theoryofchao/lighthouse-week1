@@ -20,3 +20,20 @@ function actionWhenFound(index) {
 }
 
 findWaldo2(["Alice", "Bob", "Waldo", "Winston"], actionWhenFound);
+
+/*
+{
+  array information and stuff
+
+  doesObjectExist: function(function, element, index, ){
+    for(var i = 0; i < this.length; i++) {
+      if(array[i] == element) {
+        function();
+      }
+    }
+  },
+  doADance: function() {
+    console.log("dance");
+  },
+}
+*/
