@@ -1,8 +1,8 @@
 var words = ["ground", "control", "to", "major", "tom"];
 
-var map = function(_lyrics,getWordLength) {
+var map = function(lyrics,getWordLength) {
   var wordsLength = [];
-  words.forEach(function(element) {
+  lyrics.forEach(function(element) {
     wordsLength.push(getWordLength(element));
   });
   
@@ -14,6 +14,6 @@ var lyrics = function() {
 
 };
 
-map(lyrics, function(word) {
+map(words, function(word) {
     return word.length;
 });
