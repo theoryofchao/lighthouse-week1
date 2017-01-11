@@ -120,14 +120,29 @@ var addPlaylist = function (name) {
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search
 
 var printSearchResults = function(query) {
-  
+  var songsFound = [];
+  var queryLowerCase = query.toLowerCase();
+
+  for(var track in library.tracks) {
+    var name = library.tracks[track].name.toLowerCase();
+    var artist = library.tracks[track].artist.toLowerCase();
+    var album = library.tracks[track].album.toLowerCase();
+
+    if((name.search(queryLowerCase) != -1) || (artist.search(queryLowerCase) != -1) || (album.search(queryLowerCase) != -1) ){
+      songsFound.push(track);
+    }
+  }
+
+  console.log(songsFound);
 }
 
-// printPlaylists();
-// console.log();
-// printTracks();
-// console.log();
-// printPlaylist('p01');
-// addTrackToPlaylist('t03', 'p01');
-// addTrack('Billie Jean','Michael Jackson','Thriller?');
+/*TEST CASES*/
+printPlaylists();
+console.log();
+printTracks();
+console.log();
+printPlaylist('p01');
+addTrackToPlaylist('t03', 'p01');
+addTrack('Billie Jean','Michael Jackson','Thriller?');
 addPlaylist('New Playlist');
+printSearchResults("wo");
