@@ -7,8 +7,16 @@ function findWaldo(arr, found) {
   }
 }
 
+function findWaldo2(arr, found) {
+  arr.forEach(function(element, index) {
+    if (element === "Waldo") {
+      found(index);
+    }
+  });
+}
+
 function actionWhenFound(index) {
     console.log("Found him at index",index+"!");
 }
 
-findWaldo(["Alice", "Bob", "Waldo", "Winston"], actionWhenFound);
+findWaldo2(["Alice", "Bob", "Waldo", "Winston"], actionWhenFound);
