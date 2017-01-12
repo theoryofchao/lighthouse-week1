@@ -10,10 +10,6 @@ var map = function(lyrics,getWordLength) {
   console.log(wordsLength);
 };
 
-var lyrics = function() {
-
-};
-
 map(words, function(word) {
     return word.length;
 });
