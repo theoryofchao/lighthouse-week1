@@ -1,0 +1,21 @@
+{
+  "name": "minecraft-game",
+  "version": "1.0.1",
+  "description": "minecraft game",
+  "main": "roger-mc.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "minecraft",
+    "fun",
+    "demo",
+    "lhl"
+  ],
+  "author": "Roger",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
