@@ -1,9 +1,9 @@
 /* app.js */
 
-//require and instantiate express
+// require and instantiate express
 const app = require('express')()
 
-//fake posts to simulate a database
+// fake posts to simulate a database
 const posts = [
   {
     id: 1,
@@ -27,38 +27,35 @@ const posts = [
     id: 4,
     author: 'Cody',
     title: 'Events',
-    body: 'Blog
-    post number 4'
+    body: 'Blog post number 4'
   }
-];
+]
 
-//set the view engine to ejs
-app.set('view engine', 'ejs');
+// set the view engine to ejs
+app.set('view engine', 'ejs')
 
-//blog home page
+// blog home page
 app.get('/', (req, res) => {
-  //render `home.ejs` with the list of posts
-  res.render('home', {posts: posts});
-});
+  // render `home.ejs` with the list of posts
+  res.render('home', { posts: posts })
+})
 
-//blog post
+// blog post
 app.get('/post/:id', (req, res) => {
-  //find the post in the `posts` array
+  // find the post in the `posts` array
   const post = posts.filter((post) => {
-    return post.id == req.params.id;
-  })[0];
+    return post.id == req.params.id
+  })[0]
 
-  //render the `post.ejs` template with the post content
+  // render the `post.ejs` template with the post content
   res.render('post', {
     author: post.author,
     title: post.title,
     body: post.body
-  });
-});
+  })
+})
 
-app.listen(8080);
+app.listen(8080)
 
-console.log('listening on port 8080');
-
-//render the `post.ejs` template with the post content
+console.log('listening on port 8080')
 
